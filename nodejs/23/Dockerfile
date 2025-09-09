@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH node:23-bookworm-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 # add container user and set stop signal
 RUN         useradd -m -d /home/container container

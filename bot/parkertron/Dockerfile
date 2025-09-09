@@ -1,6 +1,6 @@
 FROM    --platform=$TARGETOS/$TARGETARCH debian:bookworm
 
-LABEL   author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL   author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 ENV     DEBIAN_FRONTEND=noninteractive
 

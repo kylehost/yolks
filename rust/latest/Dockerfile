@@ -1,7 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH rust:slim
 
-LABEL       author="Ethan Coward" maintainer="ethan.coward@icloud.com"
-
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 RUN         apt update \
                 && apt -y install git dnsutils curl iproute2 ffmpeg tini pkg-config \
                 && useradd -m -d /home/container container

@@ -1,9 +1,9 @@
 FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jdk-noble
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
-LABEL       org.opencontainers.image.licenses=MIT
+LABEL       org.opencontainers.image.source="https://github.com/kylehost/yolks"
+LABEL       org.opencontainers.image.licenses=AGPL
 
 RUN         apt update -y \
             && apt install -y \

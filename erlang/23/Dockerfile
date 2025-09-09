@@ -1,8 +1,8 @@
 FROM        --platform=$TARGETOS/$TARGETARCH erlang:23-alpine
 
-LABEL       author="Pascal Zarrad" maintainer="p.zarrad@outlook.de"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/kylehost/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk add --update --no-cache ca-certificates curl git openssl sqlite tar tzdata  iproute2\

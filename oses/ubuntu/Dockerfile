@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH ubuntu:24.04
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 LABEL       org.opencontainers.image.source="https://github.com/pelican-eggs/yolks"
 LABEL       org.opencontainers.image.licenses=MIT

@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
-LABEL       org.opencontainers.image.authors="i2007@damw.eu"
+LABEL       org.opencontainers.image.authors="kyle@kyle-hosting.xyz"
 LABEL       version="1.0"
 
 ENV         DEBIAN_FRONTEND=noninteractive

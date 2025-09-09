@@ -3,7 +3,7 @@
 # ---------------------------------------
 FROM            ghcr.io/parkervcp/yolks:debian
 
-LABEL           author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 LABEL           org.opencontainers.image.licenses=MIT
 
 # Install required packages

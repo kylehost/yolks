@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
-LABEL       author="QuintenQVD" maintainer="josdekurk@gmail.com"
+LABEL       author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 ENV     DEBIAN_FRONTEND=noninteractive
 

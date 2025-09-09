@@ -22,9 +22,9 @@
 
 FROM      --platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
-LABEL     author="Torsten Widmann" maintainer="info@goover.de"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
-LABEL     org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL     org.opencontainers.image.source="https://github.com/kylehost/yolks"
 LABEL     org.opencontainers.image.licenses=MIT
 
 ENV       DEBIAN_FRONTEND=noninteractive

@@ -1,8 +1,8 @@
 FROM        --platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
-LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/kylehost/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive

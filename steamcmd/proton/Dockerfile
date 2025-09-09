@@ -3,7 +3,7 @@
 # ---------------------------------------------
 FROM        debian:bookworm-slim
 
-LABEL       author="Torsten Widmann" maintainer="info@goover.de"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 # Install required packages
 RUN         dpkg --add-architecture i386

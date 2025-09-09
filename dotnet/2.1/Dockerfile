@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/parkervcp/yolks:debian
 
-LABEL       author="Torsten Widmann" maintainer="info@goover.de"
+LABEL       author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 ENV         DEBIAN_FRONTEND=noninteractive
 

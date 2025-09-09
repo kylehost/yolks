@@ -1,3 +1,8 @@
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
+
+LABEL       org.opencontainers.image.source="https://github.com/kylehost/yolks"
+LABEL       org.opencontainers.image.licenses=MIT
+
 FROM 		--platform=$TARGETOS/$TARGETARCH ubuntu:22.04
 ENV         DEBIAN_FRONTEND=noninteractive
 

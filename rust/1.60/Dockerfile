@@ -1,6 +1,9 @@
 FROM        --platform=$TARGETOS/$TARGETARCH rust:1.60-slim
 
-LABEL       author="Ethan Coward" maintainer="ethan.coward@icloud.com"
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
+
+LABEL       org.opencontainers.image.source="https://github.com/kylehost/yolks"
+LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update \
                 && apt -y install git dnsutils curl iproute2 ffmpeg tini pkg-config \

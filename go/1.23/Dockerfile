@@ -1,5 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH golang:1.23-alpine
 
+LABEL         author="Kyle Speight" maintainer="kyle@kyle-hosting.xyz"
 
 RUN         apk add --update --no-cache ca-certificates tzdata \
 				&& adduser -D -h /home/container container
