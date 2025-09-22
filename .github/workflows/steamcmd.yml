@@ -48,3 +48,12 @@ jobs:
           tags: |
             ghcr.io/${{ steps.lower-repo.outputs.repository }}/steamcmd:${{ matrix.distro }}
             ${{ github.repository_owner == 'pelican-eggs' && format('ghcr.io/parkervcp/steamcmd:{0}', matrix.distro) || '' }}
+          # Enable caching for faster builds (reuses layers across runs)
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          # Add build args if needed for multi-platform or custom vars (e.g., for TARGETOS/TARGETARCH)
+          build-args: |
+            TARGETOS=linux
+            TARGETARCH=amd64
+          # Optional: Disable push on failure for debugging (set to false to always push if build succeeds)
+          # outputs: type=image,name=image-${{ matrix.distro }},id=image-${{ matrix.distro }}-id
