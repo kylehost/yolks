@@ -16,13 +16,10 @@ RUN         dpkg --add-architecture i386 \
 				gcc \
 				g++ \
 				lib32gcc-s1 \
-				libgcc-10-dev \
 				libcurl4-gnutls-dev:i386 \
 				libssl-dev:i386 \
 				libssl-dev \
-				libcurl4:i386 \
 				libcurl4t64:i386 \
-				libcurl3-gnutls:i386 \
 				libcurl4-gnutls:i386 \
 				lib32stdc++6 \
 				libsdl2-2.0-0:i386 \
