@@ -8,9 +8,9 @@ LABEL       org.opencontainers.image.licenses=AGPL-3.0-or-later
 ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         dpkg --add-architecture i386 \
-			&& apt update \
-			&& apt upgrade -y 
-RUN			apt -y install \
+			&& apt-get update \
+			&& apt-get upgrade -y \
+			&& apt-get install -y \
 				tar \
 				curl \
 				gcc \
@@ -20,19 +20,22 @@ RUN			apt -y install \
 				libcurl4-gnutls-dev:i386 \
 				libssl-dev:i386 \
 				libssl-dev \
+				libcurl4:i386 \
 				libcurl4t64:i386 \
+				libcurl3-gnutls:i386 \
+				libcurl4-gnutls:i386 \
 				lib32stdc++6 \
-				libcurl3t64-gnutls:i386 \
 				libsdl2-2.0-0:i386 \
-				iproute2 gdb \
+				iproute2 \
+				gdb \
 				libsdl1.2debian \
 				telnet \
 				net-tools \
-				netcat tzdata \
+				netcat \
+				netcat-openbsd \
+				tzdata \
 				libtinfo6:i386 \
-				libcurl4-gnutls-dev:i386 \
 				libncurses6:i386 \
-				libcurl4-gnutls:i386 \
 				faketime:i386 \
 				lib32tinfo6 \
 				lib32z1 \
@@ -51,21 +54,21 @@ RUN			apt -y install \
 				libc6 \
 				libc6:i386 \
 				xvfb \
-				gdb \
 				libc++-dev \
-				tini 
+				tini
 
-RUN 		useradd -d /home/container -m container
+RUN         useradd -d /home/container -m container
 
 ## Specific to pavlov_vr
-RUN			rm /usr/lib/x86_64-linux-gnu/libc++.so  \
+RUN         rm /usr/lib/x86_64-linux-gnu/libc++.so \
 			&& ln -s /usr/lib/x86_64-linux-gnu/libc++.so.1 /usr/lib/x86_64-linux-gnu/libc++.so
 
-## install rcon
+## install rcon (amd64 only; adjust for multi-arch if needed)
 RUN         cd /tmp/ \
             && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.3/rcon-0.10.3-amd64_linux.tar.gz > rcon.tar.gz \
             && tar xvf rcon.tar.gz \
-            && mv rcon-0.10.3-amd64_linux/rcon /usr/local/bin/
+            && mv rcon-0.10.3-amd64_linux/rcon /usr/local/bin/ \
+            && rm -rf rcon.tar.gz rcon-0.10.3-amd64_linux
 
 USER        container
 ENV         USER=container HOME=/home/container
