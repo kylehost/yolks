@@ -43,5 +43,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ steps.lower-repo.outputs.repository }}/yolks:python_${{ matrix.tag }}
-            ${{ github.repository_owner == 'kylehost' && format('ghcr.io/kylehost/yolks:shareforge_{0}', matrix.tag) || '' }}
+            ghcr.io/${{ steps.lower-repo.outputs.repository }}/shareforge:shareforge_${{ matrix.tag }}
+            ${{ github.repository_owner == 'kylehost' && format('ghcr.io/kylehost/shareforge:shareforge_{0}', matrix.tag) || '' }}
